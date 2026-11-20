@@ -1,15 +1,63 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Mi día </ion-title>
+    <ion-title>Mi día 🌷</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Mi día</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Mi día"></app-explore-container>
+  <div class="welcome-section">
+    <p class="date-label">VIERNES · 20 DE NOVIEMBRE</p>
+    <h1>Mi día 🌷</h1>
+    <p class="welcome-message">
+      Pequeños pasos, grandes cambios.
+    </p>
+  </div>
+
+  <div class="progress-card">
+    <div class="progress-heading">
+      <h2>Tu progreso de hoy</h2>
+      <span>2 de 5</span>
+    </div>
+
+    <div class="progress-track">
+      <div class="progress-fill"></div>
+    </div>
+
+    <p>¡Vas por buen camino!</p>
+  </div>
+
+  <div class="habits-section">
+    <h2>Mis hábitos</h2>
+
+    <div class="habit-card">
+      <ion-icon name="checkmark-circle" color="success"></ion-icon>
+      <div>
+        <h3>Tomar agua</h3>
+        <p>08:00</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <ion-icon name="checkmark-circle" color="success"></ion-icon>
+      <div>
+        <h3>Leer 20 minutos</h3>
+        <p>10:00</p>
+      </div>
+    </div>
+
+    <div class="habit-card">
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <div>
+        <h3>Hacer ejercicio</h3>
+        <p>16:00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="add-habit">
+    <ion-icon name="add-circle-outline"></ion-icon>
+    <span>Agregar hábito</span>
+  </div>
+
 </ion-content>

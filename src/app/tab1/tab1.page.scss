@@ -1,0 +1,126 @@
+.welcome-section {
+    padding: 24px 20px 16px;
+
+    .date-label {
+        color: #a58b96;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        color: #d78ca7;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0 0 8px;
+    }
+
+    .welcome-message {
+        color: #8e7b83;
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.progress-card {
+    background: #fff0f5;
+    border-radius: 18px;
+    padding: 18px;
+    margin: 12px 20px 28px;
+
+    .progress-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            color: #66515b;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        span {
+            color: #d07899;
+            font-weight: 700;
+        }
+    }
+
+    .progress-track {
+        background: #f4dce6;
+        height: 9px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 16px;
+
+        .progress-fill {
+            background: #d78ca7;
+            width: 40%;
+            height: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    p {
+        color: #967d88;
+        font-size: 12px;
+        margin: 10px 0 0;
+    }
+}
+
+.habits-section {
+    padding: 0 20px;
+
+    h2 {
+        color: #66515b;
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .habit-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: #ffffff;
+        border: 1px solid #f1e5eb;
+        border-radius: 16px;
+        padding: 15px;
+        margin-bottom: 12px;
+
+        ion-icon {
+            font-size: 25px;
+        }
+
+        h3 {
+            color: #66515b;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 0 0 5px;
+        }
+
+        p {
+            color: #a58b96;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+}
+
+.add-habit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #d78ca7;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 20px;
+    font-weight: 600;
+
+    ion-icon {
+        font-size: 21px;
+    }
+}
