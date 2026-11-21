@@ -1,0 +1,55 @@
+<!-- Contenedor principal del formulario -->
+<div class="add-habit-form">
+
+    <!-- Título y descripción -->
+    <h2>Nuevo hábito 🌷</h2>
+    <p>Agregá un pequeño paso para mejorar tu día.</p>
+
+    <!-- Campo para escribir el nombre -->
+    <ion-item>
+        <ion-label position="stacked">Nombre del hábito</ion-label>
+
+        <ion-input placeholder="Ej. Tomar agua" type="text" [(ngModel)]="habitName">
+        </ion-input>
+    </ion-item>
+
+    <!-- Selector de categoría -->
+    <ion-item>
+        <ion-label position="stacked">Categoría</ion-label>
+
+        <ion-select placeholder="Seleccioná una categoría" [(ngModel)]="habitCategory">
+
+            <ion-select-option value="salud">Salud</ion-select-option>
+            <ion-select-option value="estudio">Estudio</ion-select-option>
+            <ion-select-option value="bienestar">Bienestar</ion-select-option>
+            <ion-select-option value="personal">Personal</ion-select-option>
+
+        </ion-select>
+    </ion-item>
+
+    <!-- Selector de horario -->
+    <div class="time-field">
+
+        <ion-label>Horario</ion-label>
+
+        <ion-datetime presentation="time" locale="es-PY" hour-cycle="h23" [(ngModel)]="habitTime">
+        </ion-datetime>
+
+    </div>
+
+    <!-- Botones para guardar o cancelar -->
+    <div class="form-actions">
+
+        <!-- Cierra el formulario sin guardar -->
+        <ion-button fill="outline" color="medium" (click)="cancel()">
+            Cancelar
+        </ion-button>
+
+        <!-- Guarda el nuevo hábito -->
+        <ion-button color="primary" (click)="saveHabit()">
+            Guardar hábito
+        </ion-button>
+
+    </div>
+
+</div>
