@@ -1,0 +1,38 @@
+.add-habit-form {
+    padding: 20px;
+
+    h2 {
+        color: #d78ca7;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    p {
+        color: #8a7b82;
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+
+    .time-field {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 20px 16px;
+
+        ion-label {
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        ion-datetime {
+            align-self: flex-start;
+            margin-top: 4px;
+            border-radius: 12px;
+            background: #fff0f5;
+        }
+    }
+
+}
