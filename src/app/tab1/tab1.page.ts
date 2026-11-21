@@ -12,13 +12,18 @@ import {
 } from 'ionicons/icons';
 
 // Componentes de Ionic que utiliza el HTML.
+// ModalController permite abrir y controlar ventanas modales.
 import {
   IonHeader,
   IonToolbar,
   IonTitle,
   IonContent,
-  IonIcon
+  IonIcon,
+  ModalController
 } from '@ionic/angular';
+
+// Componente que contiene el formulario para agregar hábitos.
+import { AddHabitComponent } from '../add-habit/add-habit.component';
 
 // Registramos los iconos para que Ionic pueda mostrarlos.
 addIcons({
@@ -31,6 +36,7 @@ addIcons({
 interface Habit {
   id: number;
   name: string;
+  category: string;
   time: string;
   completed: boolean;
 }
@@ -39,27 +45,41 @@ interface Habit {
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonIcon],
+
+  // Componentes que utiliza directamente el HTML de esta pantalla.
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonIcon
+  ],
 })
 export class Tab1Page {
+
+  // Inyectamos el controlador de ventanas modales.
+  constructor(private modalController: ModalController) { }
 
   // Lista inicial de hábitos.
   habits: Habit[] = [
     {
       id: 1,
       name: 'Tomar agua',
+      category: 'salud',
       time: '08:00',
       completed: true
     },
     {
       id: 2,
       name: 'Leer 20 minutos',
+      category: 'estudio',
       time: '10:00',
       completed: true
     },
     {
       id: 3,
       name: 'Hacer ejercicio',
+      category: 'bienestar',
       time: '16:00',
       completed: false
     }
@@ -87,4 +107,36 @@ export class Tab1Page {
       habit.completed = !habit.completed;
     }
   }
+
+  // Abre la ventana para agregar un nuevo hábito.
+  async openAddHabitModal(): Promise<void> {
+
+    // Creamos el modal e indicamos qué componente mostrará.
+    const modal = await this.modalController.create({
+      component: AddHabitComponent
+    });
+
+    // Mostramos la ventana en pantalla.
+    await modal.present();
+
+    // Esperamos a que el modal se cierre y devuelva sus datos.
+    const { data, role } = await modal.onWillDismiss();
+
+    // Si no hay datos o no se confirmó, no agregamos nada.
+    if (role !== 'confirm' || !data) {
+      return;
+    }
+
+    // Creamos el nuevo hábito y lo agregamos a la lista.
+    const newHabit: Habit = {
+      id: Date.now(),
+      name: data.name,
+      category: data.category,
+      time: data.time,
+      completed: false
+    };
+
+    this.habits.push(newHabit);
+  }
+
 }
