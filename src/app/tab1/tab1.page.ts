@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 
 // Herramienta para registrar los iconos.
 import { addIcons } from 'ionicons';
@@ -58,7 +58,7 @@ interface Habit {
 export class Tab1Page {
 
   // Inyectamos el controlador de ventanas modales.
-  constructor(private modalController: ModalController) { }
+  constructor(private modalController: ModalController, private changeDetectorRef: ChangeDetectorRef) { }
 
   // Lista inicial de hábitos.
   habits: Habit[] = [
@@ -137,6 +137,9 @@ export class Tab1Page {
     };
 
     this.habits.push(newHabit);
+
+    // Le avisamos a Angular que debe actualizar la pantalla.
+    this.changeDetectorRef.detectChanges();
   }
 
 }
