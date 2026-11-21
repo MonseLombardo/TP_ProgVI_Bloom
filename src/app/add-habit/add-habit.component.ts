@@ -44,6 +44,15 @@ export class AddHabitComponent {
 
   // Guarda el nuevo hábito y devuelve sus datos a la pantalla principal.
   async saveHabit(): Promise<void> {
+
+    // Mostramos los valores recibidos del formulario.
+    console.log('Datos del formulario:', {
+      nombre: this.habitName,
+      categoria: this.habitCategory,
+      horario: this.habitTime
+    });
+
+    // Comprobamos que todos los campos estén completos.
     if (
       !this.habitName.trim() ||
       !this.habitCategory ||
@@ -52,6 +61,7 @@ export class AddHabitComponent {
       return;
     }
 
+    // Devolvemos los datos a la pantalla principal.
     await this.modalController.dismiss(
       {
         name: this.habitName.trim(),
