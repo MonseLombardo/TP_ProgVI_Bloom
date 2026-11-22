@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
+import { Tip } from './tip.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -13,7 +14,7 @@ export class TipsService {
 
     constructor(private http: HttpClient) { }
 
-    getTips(): Observable<any[]> {
-        return this.http.get<any[]>(this.apiUrl);
+    getTips(): Observable<Tip[]> {
+        return this.http.get<Tip[]>(this.apiUrl);
     }
 }
