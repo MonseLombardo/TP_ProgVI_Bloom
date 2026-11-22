@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Empezá de a poco",
+        "category": "Hábitos",
+        "description": "No necesitás cambiar toda tu rutina de golpe. Comenzá con una acción pequeña y repetila cada día.",
+        "icon": "🌱"
+    },
+    {
+        "id": 2,
+        "title": "Organizá tu día",
+        "category": "Productividad",
+        "description": "Anotá tus tareas más importantes y establecé prioridades para aprovechar mejor tu tiempo.",
+        "icon": "📅"
+    },
+    {
+        "id": 3,
+        "title": "Descansar también es avanzar",
+        "category": "Bienestar",
+        "description": "Tomarte pausas durante el día ayuda a recuperar energía y mantener la concentración.",
+        "icon": "🌙"
+    },
+    {
+        "id": 4,
+        "title": "Mantenete hidratada",
+        "category": "Salud",
+        "description": "Recordá tomar agua durante el día para acompañar el buen funcionamiento de tu organismo.",
+        "icon": "💧"
+    },
+    {
+        "id": 5,
+        "title": "Reconocé tus logros",
+        "category": "Motivación",
+        "description": "Celebrá tus pequeños avances. Cada hábito que cumplís representa un paso hacia tus objetivos.",
+        "icon": "🌷"
+    },
+    {
+        "id": 6,
+        "title": "Prepará tu espacio",
+        "category": "Productividad",
+        "description": "Un espacio ordenado y cómodo puede ayudarte a concentrarte mejor al estudiar o trabajar.",
+        "icon": "✨"
+    }
+]
