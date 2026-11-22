@@ -132,7 +132,7 @@ export class Tab1Page {
       id: Date.now(),
       name: data.name,
       category: data.category,
-      time: data.time,
+      time: data.time.split('T')[1]?.slice(0, 5) ?? data.time,
       completed: false
     };
 
