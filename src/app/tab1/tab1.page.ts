@@ -1,5 +1,5 @@
 
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 
 // Herramienta para registrar los iconos.
 import { addIcons } from 'ionicons';
@@ -55,10 +55,23 @@ interface Habit {
     IonIcon
   ],
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
 
   // Inyectamos el controlador de ventanas modales.
   constructor(private modalController: ModalController, private changeDetectorRef: ChangeDetectorRef) { }
+
+  ngOnInit(): void {
+    const savedHabits = localStorage.getItem('bloom_habits');
+
+    if (savedHabits) {
+      this.habits = JSON.parse(savedHabits);
+    }
+  }
+
+
+  saveHabits(): void {
+    localStorage.setItem('bloom_habits', JSON.stringify(this.habits));
+  }
 
   // Lista inicial de hábitos.
   habits: Habit[] = [
@@ -105,6 +118,7 @@ export class Tab1Page {
 
     if (habit) {
       habit.completed = !habit.completed;
+      this.saveHabits();
     }
   }
 
@@ -137,6 +151,7 @@ export class Tab1Page {
     };
 
     this.habits.push(newHabit);
+    this.saveHabits();
 
     // Le avisamos a Angular que debe actualizar la pantalla.
     this.changeDetectorRef.detectChanges();
