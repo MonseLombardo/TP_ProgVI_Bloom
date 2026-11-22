@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: false, //identifica el entorno de desarrollo.
+  apiUrl: 'assets/data/tips.json' //contiene la ruta del archivo JSON a consumir
 };
 
 /*
