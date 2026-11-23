@@ -1,0 +1,127 @@
+// Estilos generales de la pantalla.
+ion-content {
+    --background: #fff9fc;
+}
+
+// Presentación de la sección Misiones.
+.welcome-section {
+    text-align: center;
+    padding: 20px 12px 12px;
+
+    h2 {
+        color: #9b6688;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    p {
+        color: #947f8c;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+// Tarjeta que muestra el progreso general.
+.progress-card {
+    margin: 12px 0 24px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(180, 133, 164, 0.12);
+
+    ion-card-title {
+        color: #9b6688;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    p {
+        color: #947f8c;
+        margin-bottom: 14px;
+    }
+
+    ion-progress-bar {
+        --background: #f3e5ed;
+        --progress-background: #d99cbd;
+        height: 9px;
+        border-radius: 10px;
+    }
+}
+
+// Título que introduce la lista de desafíos.
+.missions-heading {
+    padding: 0 5px;
+
+    h2 {
+        color: #9b6688;
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    p {
+        color: #947f8c;
+        font-size: 13px;
+        margin-top: 0;
+    }
+}
+
+// Diseño de cada tarjeta de misión.
+.mission-card {
+    margin: 12px 0;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(180, 133, 164, 0.10);
+    transition: background-color 0.2s ease;
+
+    ion-card-title {
+        color: #805d75;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    ion-card-content {
+        p {
+            color: #947f8c;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+    }
+
+    ion-button {
+        --border-radius: 12px;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+// Apariencia especial para las misiones completadas.
+.mission-card.completed {
+    background: #f5fbf6;
+
+    ion-card-title {
+        color: #6d9a78;
+    }
+}
+
+// Mensaje que aparece al completar todos los desafíos.
+.success-message {
+    text-align: center;
+    background: #f8edf4;
+    border-radius: 18px;
+    padding: 18px;
+    margin: 20px 0;
+
+    h2 {
+        color: #9b6688;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        color: #947f8c;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
