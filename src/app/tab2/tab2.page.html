@@ -1,15 +1,87 @@
+<!-- Encabezado de la pantalla Misiones -->
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Misiones </ion-title>
+    <ion-title>Misiones 🌷</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Misiones</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- Contenido principal de la pantalla -->
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <app-explore-container name="Misiones"></app-explore-container>
+  <!-- Presentación de la sección -->
+  <div class="welcome-section">
+    <h2>¡Pequeños pasos, grandes logros! ✨</h2>
+    <p>Completá tus desafíos y regalate un momento para crecer.</p>
+  </div>
+
+  <!-- Resumen del progreso -->
+  <ion-card class="progress-card">
+    <ion-card-header>
+      <ion-card-title>Tu progreso de hoy 🌸</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Mostramos la cantidad de misiones completadas -->
+      <p>
+        {{ completedMissions }} de {{ missions.length }} misiones completadas
+      </p>
+
+      <!-- Barra que representa el progreso general -->
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Título de la lista de desafíos -->
+  <div class="missions-heading">
+    <h2>Tus desafíos</h2>
+    <p>Cada pequeño esfuerzo cuenta 💗</p>
+  </div>
+
+  <!-- Recorremos la lista y mostramos una tarjeta por misión -->
+  @for (mission of missions; track mission.id) {
+
+  <ion-card class="mission-card" [class.completed]="mission.completed">
+
+    <ion-card-header>
+
+      <!-- Mostramos el emoji y el título de la misión -->
+      <ion-card-title>
+        {{ mission.icon }} {{ mission.title }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Descripción del desafío -->
+      <p>{{ mission.description }}</p>
+
+      <!-- Botón para completar o desmarcar la misión -->
+      <ion-button expand="block" fill="outline" [color]="mission.completed ? 'success' : 'primary'"
+        (click)="toggleMission(mission)">
+
+        <!-- Cambiamos el icono según el estado de la misión -->
+        <ion-icon slot="start" [name]="mission.completed ? 'checkmark-circle-outline' : 'ellipse-outline'">
+        </ion-icon>
+
+        <!-- Cambiamos el texto según el estado -->
+        {{ mission.completed ? '¡Completada!' : 'Completar misión' }}
+
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  }
+
+  <!-- Mensaje cuando todas las misiones están completas -->
+  @if (completedMissions === missions.length) {
+  <div class="success-message">
+    <h2>¡Lo lograste! 🎉</h2>
+    <p>Completaste todos tus desafíos. ¡Estamos orgullosas de vos!</p>
+  </div>
+  }
+
 </ion-content>
