@@ -1,0 +1,109 @@
+/* =================================
+   DESCUBRIR 🪻
+================================= */
+
+ion-content {
+    --background: #fff9fb;
+}
+
+/* Presentación de la pantalla */
+.welcome-section {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 20px 18px;
+
+    .date-label {
+        color: #a58b96;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: #d78ca7;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0 0 8px;
+    }
+
+    .welcome-message {
+        color: #8e7b83;
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+/* Tarjetas de consejos */
+ion-card {
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 12px auto 16px;
+
+    background: #ffffff;
+    border: 1px solid #f1e5eb;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(185, 125, 151, 0.07);
+
+    ion-card-title {
+        color: #66515b;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    ion-card-content {
+        p {
+            color: #8e7b83;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        ion-text p {
+            color: #d07899;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Estado de carga */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+
+    ion-spinner {
+        color: #d78ca7;
+        width: 35px;
+        height: 35px;
+    }
+
+    p {
+        color: #8e7b83;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
+
+/* Estado de error */
+ion-text[color="danger"] {
+    display: block;
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 16px;
+    background: #fff0f0;
+    border: 1px solid #f3d5d5;
+    border-radius: 14px;
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+    }
+}

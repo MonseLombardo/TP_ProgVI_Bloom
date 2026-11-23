@@ -1,88 +1,112 @@
-// Estilos generales de la pantalla.
+/* =================================
+   MISIONES 🏆
+================================= */
+
 ion-content {
-    --background: #fff9fc;
+    --background: #fff9fb;
 }
 
-// Presentación de la sección Misiones.
+/* Presentación de la pantalla */
 .welcome-section {
-    text-align: center;
-    padding: 20px 12px 12px;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 20px 18px;
 
-    h2 {
-        color: #9b6688;
-        font-size: 22px;
+    .date-label {
+        color: #a58b96;
+        font-size: 11px;
         font-weight: 700;
-        margin-bottom: 8px;
+        letter-spacing: 1.3px;
+        margin-bottom: 10px;
     }
 
-    p {
-        color: #947f8c;
+    h1 {
+        color: #d78ca7;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0 0 8px;
+    }
+
+    .welcome-message {
+        color: #8e7b83;
         font-size: 14px;
-        line-height: 1.5;
+        margin: 0;
     }
 }
 
-// Tarjeta que muestra el progreso general.
+/* Tarjeta de progreso */
 .progress-card {
-    margin: 12px 0 24px;
-    border-radius: 18px;
-    background: #fff;
-    box-shadow: 0 4px 14px rgba(180, 133, 164, 0.12);
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 12px auto 28px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fff0f5, #fff7fa);
+    border: 1px solid #f6dce6;
+    box-shadow: 0 4px 14px rgba(185, 125, 151, 0.08);
 
     ion-card-title {
-        color: #9b6688;
+        color: #d07899;
         font-size: 18px;
         font-weight: 700;
     }
 
     p {
-        color: #947f8c;
+        color: #8e7b83;
         margin-bottom: 14px;
     }
 
     ion-progress-bar {
-        --background: #f3e5ed;
-        --progress-background: #d99cbd;
-        height: 9px;
+        --background: #f4dce6;
+        --progress-background: #d78ca7;
+        height: 10px;
         border-radius: 10px;
     }
 }
 
-// Título que introduce la lista de desafíos.
+/* Título que introduce los desafíos */
 .missions-heading {
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding: 0 5px;
 
     h2 {
-        color: #9b6688;
+        color: #d07899;
         font-size: 19px;
         font-weight: 700;
         margin-bottom: 5px;
     }
 
     p {
-        color: #947f8c;
+        color: #8e7b83;
         font-size: 13px;
         margin-top: 0;
     }
 }
 
-// Diseño de cada tarjeta de misión.
+/* Tarjetas de cada misión */
 .mission-card {
-    margin: 12px 0;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 12px auto;
     border-radius: 18px;
-    background: #fff;
-    box-shadow: 0 3px 12px rgba(180, 133, 164, 0.10);
-    transition: background-color 0.2s ease;
+    background: #ffffff;
+    border: 1px solid #f1e5eb;
+    box-shadow: 0 4px 12px rgba(185, 125, 151, 0.07);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
     ion-card-title {
-        color: #805d75;
+        color: #66515b;
         font-size: 17px;
         font-weight: 700;
     }
 
     ion-card-content {
         p {
-            color: #947f8c;
+            color: #8e7b83;
             font-size: 14px;
             line-height: 1.5;
             margin-bottom: 16px;
@@ -91,36 +115,51 @@ ion-content {
 
     ion-button {
         --border-radius: 12px;
+        --background: #d78ca7;
+        --background-hover: #cc809d;
+        --background-activated: #bd7b93;
+        --color: #ffffff;
         font-weight: 600;
         margin: 0;
     }
 }
 
-// Apariencia especial para las misiones completadas.
+/* Misiones completadas */
 .mission-card.completed {
     background: #f5fbf6;
+    border-color: #dcebdd;
 
     ion-card-title {
         color: #6d9a78;
     }
+
+    ion-button {
+        --background: #e5f3e8;
+        --color: #6d9a78;
+        --border-color: #b9d9c0;
+    }
 }
 
-// Mensaje que aparece al completar todos los desafíos.
+/* Mensaje al completar todos los desafíos */
 .success-message {
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
     text-align: center;
-    background: #f8edf4;
+    background: #fff0f5;
+    border: 1px solid #f6dce6;
     border-radius: 18px;
-    padding: 18px;
-    margin: 20px 0;
+    padding: 20px;
+    margin: 20px auto;
 
     h2 {
-        color: #9b6688;
+        color: #d07899;
         font-size: 20px;
         margin-bottom: 8px;
     }
 
     p {
-        color: #947f8c;
+        color: #8e7b83;
         font-size: 14px;
         line-height: 1.5;
     }

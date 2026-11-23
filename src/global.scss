@@ -25,6 +25,59 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+
+
+/* =================================
+   IDENTIDAD VISUAL DE BLOOM 🌸
+================================= */
+
+:root {
+    color-scheme: light;
+
+    /* Colores principales */
+    --ion-color-primary: #d78ca7;
+    --ion-color-primary-rgb: 215, 140, 167;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #bd7b93;
+    --ion-color-primary-tint: #df9ab2;
+
+    /* Fondo y textos */
+    --ion-background-color: #fff9fb;
+    --ion-text-color: #66515b;
+
+    /* Barra superior */
+    --ion-toolbar-background: #fff9fb;
+    --ion-toolbar-color: #66515b;
+
+    /* Navegación inferior */
+    --ion-tab-bar-background: #fff9fb;
+    --ion-tab-bar-color: #a58b96;
+    --ion-tab-bar-color-selected: #d07899;
+}
+
+/* Fondo general de las pantallas */
+ion-content {
+    --background: #fff9fb;
+    --color: #66515b;
+}
+
+/* Encabezados */
+ion-toolbar {
+    --background: #fff9fb;
+    --color: #66515b;
+}
+
+/* Barra de navegación */
+ion-tab-bar {
+    --background: #fff9fb;
+    --color: #a58b96;
+    --color-selected: #d07899;
+}
+
+
+
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -34,4 +87,4 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/*@import '@ionic/angular/css/palettes/dark.system.css'; */

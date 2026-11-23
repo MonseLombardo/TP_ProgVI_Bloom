@@ -1,12 +1,19 @@
+/* =================================
+   MI DÍA 🌷
+================================= */
+
+/* Encabezado de bienvenida */
 .welcome-section {
-    padding: 24px 20px 16px;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 20px 18px;
 
     .date-label {
         color: #a58b96;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin-bottom: 8px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+        margin-bottom: 10px;
     }
 
     h1 {
@@ -23,82 +30,112 @@
     }
 }
 
+/* Tarjeta de progreso */
 .progress-card {
-    background: #fff0f5;
-    border-radius: 18px;
-    padding: 18px;
-    margin: 12px 20px 28px;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 12px auto 30px;
+    padding: 22px;
+    background: linear-gradient(135deg, #fff0f5, #fff7fa);
+    border: 1px solid #f6dce6;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(185, 125, 151, 0.08);
 
     .progress-heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 12px;
 
         h2 {
             color: #66515b;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             margin: 0;
         }
 
         span {
             color: #d07899;
             font-weight: 700;
+            font-size: 15px;
         }
     }
 
     .progress-track {
         background: #f4dce6;
-        height: 9px;
+        height: 10px;
         border-radius: 20px;
         overflow: hidden;
-        margin-top: 16px;
+        margin-top: 17px;
 
         .progress-fill {
-            background: #d78ca7;
-            width: 40%;
+            background: linear-gradient(90deg, #d78ca7, #e6a9bf);
             height: 100%;
             border-radius: 20px;
+            transition: width 0.3s ease;
         }
     }
 
     p {
         color: #967d88;
         font-size: 12px;
-        margin: 10px 0 0;
+        margin: 12px 0 0;
     }
 }
 
+/* Lista de hábitos */
 .habits-section {
-    padding: 0 20px;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
 
     h2 {
         color: #66515b;
         font-size: 19px;
         font-weight: 700;
-        margin-bottom: 16px;
+        margin: 0 0 17px;
     }
 
     .habit-card {
         display: flex;
         align-items: center;
-        gap: 14px;
-
-        background: #ffffff;
-        border: 1px solid #f1e5eb;
-        border-radius: 16px;
-        padding: 15px;
-        margin-bottom: 12px;
+        gap: 15px;
 
         width: 100%;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 1px solid #f1e5eb;
+        border-radius: 17px;
+        padding: 16px;
+        margin-bottom: 13px;
+
         text-align: left;
         font: inherit;
         cursor: pointer;
+        transition: background 0.2s ease, border-color 0.2s ease,
+            transform 0.2s ease, box-shadow 0.2s ease;
 
+        &:hover {
+            background: #fff9fb;
+            border-color: #e9c5d4;
+            box-shadow: 0 3px 10px rgba(185, 125, 151, 0.08);
+        }
+
+        &:active {
+            transform: scale(0.99);
+        }
+
+        &:focus-visible {
+            outline: 2px solid #d78ca7;
+            outline-offset: 3px;
+        }
 
         // Diferenciamos visualmente los hábitos completados.
         &.completed {
-            background: #fff8fa;
+            background: #fff7fa;
             border-color: #e9c5d4;
         }
 
@@ -123,17 +160,40 @@
     }
 }
 
+/* Botón para agregar hábitos */
 .add-habit {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    background: #d78ca7;
+    gap: 9px;
+
+    width: calc(100% - 40px);
+    max-width: 900px;
+    box-sizing: border-box;
+
+    background: linear-gradient(135deg, #d78ca7, #cc809d);
     color: #ffffff;
+    border: none;
     border-radius: 16px;
     padding: 16px;
-    margin: 20px;
-    font-weight: 600;
+    margin: 22px auto 28px;
+
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(185, 125, 151, 0.22);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:focus-visible {
+        outline: 2px solid #d78ca7;
+        outline-offset: 3px;
+    }
 
     ion-icon {
         font-size: 21px;
